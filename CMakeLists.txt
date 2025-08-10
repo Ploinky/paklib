@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.28)
 include(CMakePackageConfigHelpers)
 write_basic_package_version_file(
   "${CMAKE_CURRENT_BINARY_DIR}/paklibConfigVersion.cmake"
-  VERSION 0.0.1
+  VERSION 0.0.2
   COMPATIBILITY AnyNewerVersion
 )
 

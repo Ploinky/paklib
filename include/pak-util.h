@@ -85,7 +85,7 @@ namespace paklib {
 				printf("That is a directory!\n");
 
 				for (const auto& entry : std::filesystem::directory_iterator(fileName)) {
-					printf(entry.path().string().append("\n").c_str());
+					std::cout << entry.path().string().append("\n") << std::endl;
 					PackFile(fileParentDir, entry.path().string(), data, entries);
 				}
 
