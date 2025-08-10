@@ -98,7 +98,7 @@ namespace paklib {
 
 			PakFileTableEntry entry{};
 			entry.FilePathLength = fileName.length();
-			entry.FilePath = std::regex_replace(fileName, std::regex(fileParentDir), "");
+			entry.FilePath = std::regex_replace(fileName, std::regex("\\\\"), "/");
 			entry.Offset = offset;
 			entry.Size = file.size;
 

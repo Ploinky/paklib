@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.28)
 include(CMakePackageConfigHelpers)
 write_basic_package_version_file(
   "${CMAKE_CURRENT_BINARY_DIR}/paklibConfigVersion.cmake"
-  VERSION 0.0.2
+  VERSION 0.0.3
   COMPATIBILITY AnyNewerVersion
 )
 
@@ -44,6 +44,13 @@ install(FILES
   "${CMAKE_CURRENT_BINARY_DIR}/paklibConfig.cmake"
   "${CMAKE_CURRENT_BINARY_DIR}/paklibConfigVersion.cmake"
   DESTINATION lib/cmake/paklib
+)
+
+install(
+  FILES ${CMAKE_CURRENT_BINARY_DIR}/$<CONFIG>/paklibd.pdb
+  DESTINATION lib
+  CONFIGURATIONS Debug
+  OPTIONAL
 )
 
 install(EXPORT paklibTargets
